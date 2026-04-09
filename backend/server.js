@@ -7,12 +7,12 @@ const app = express();
 
 app.use(cors({
   origin: [
-    "https://cinematchrecs.netlify.app/",
+    "https://cinematchrecs.netlify.app",
     "http://localhost:5500",
     "http://127.0.0.1:5500"
   ]
 }));
-app.use(express.json());
+app.use(express.json()); 
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("✅ MongoDB connected"))
