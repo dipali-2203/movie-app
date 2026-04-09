@@ -5,14 +5,14 @@ const cors = require("cors");
 
 const app = express();
 
-app.use(cors({
-  origin: [
-    "https://cinematchrecs.netlify.app",
-    "http://localhost:5500",
-    "http://127.0.0.1:5500"
-  ]
-}));
-app.use(express.json()); 
+// TEMP: allow all (debug mode)
+app.use(cors());
+
+app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.send("API is running 🚀");
+});
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("✅ MongoDB connected"))
