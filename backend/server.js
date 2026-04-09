@@ -6,7 +6,9 @@ const cors = require("cors");
 const app = express();
 
 // TEMP: allow all (debug mode)
-app.use(cors());
+app.use(cors({
+  origin: "https://cinematchrecs.netlify.app"
+}));
 
 app.use(express.json());
 
