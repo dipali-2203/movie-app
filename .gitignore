@@ -1,0 +1,23 @@
+# Node modules (VERY important)
+node_modules/
+backend/node_modules/
+
+# Environment variables (IMPORTANT - contains secrets)
+.env
+backend/.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Optional: build / temp files
+dist/
+build/
+
+# VS Code
+.vscode/
