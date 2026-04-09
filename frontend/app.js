@@ -1,4 +1,4 @@
-const API = "http://localhost:5000/api";
+const API = "https://movie-app-backend-jgik.onrender.com/api";
 
 let currentMood = "";
 let recPage = 1;
