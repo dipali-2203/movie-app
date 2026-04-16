@@ -38,14 +38,24 @@ A full-stack movie discovery and watchlist app. Search for movies, get mood-base
 ```
 movie-app/
 ├── frontend/
-│   └── ...              # HTML, CSS, JS (vanilla)
-└── backend/
-    ├── server.js        # Express entry point
-    ├── routes/
-    │   ├── auth.js      # /api/auth (login, signup, /me)
-    │   ├── movies.js    # /api/movies (search, recommend, details)
-    │   └── watchlist.js # /api/watchlist (CRUD)
-    └── ...
+│   ├── index.html       # Main HTML
+│   ├── app.js           # All frontend logic
+│   └── style.css        # Styles
+├── backend/
+│   ├── server.js        # Express entry point
+│   ├── middleware/
+│   │   └── auth.js      # JWT verification middleware
+│   ├── models/
+│   │   ├── User.js      # User schema
+│   │   └── Watchlist.js # Watchlist schema
+│   ├── routes/
+│   │   ├── auth.js      # /api/auth (login, signup, /me)
+│   │   ├── movies.js    # /api/movies (search, recommend, details)
+│   │   └── watchlist.js # /api/watchlist (CRUD)
+│   ├── package.json
+│   └── package-lock.json
+├── .gitignore
+└── README.md
 ```
 
 ---
